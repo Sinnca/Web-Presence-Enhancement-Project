@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Rizz Arena</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+
+  <style>
+    body, html {
+      height: 100%;
+      font-size: 1.1rem; /* Slightly bigger font */
+    }
+
+    .content-wrapper {
+      min-height: calc(100vh - 130px);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    .form-label {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    input.form-control,
+    textarea.form-control {
+      font-size: 1.1rem;
+      padding: 12px;
+    }
+
+    button.btn {
+      font-size: 1.1rem;
+      padding: 10px 24px;
+    }
+
+    .col-md-6 h4 {
+      font-size: 1.4rem;
+      margin-top: 20px;
+    }
+
+    .container {
+      max-width: 960px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Rizz Arena</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-dark text-white py-4 text-center">
+    <h1>Contact Us</h1>
+  </header>
+
+  <!-- Content -->
+  <div class="container mt-4 content-wrapper">
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6 mb-5">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message:</label>
+            <textarea class="form-control" id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+
+      <!-- Extra Info -->
+      <div class="col-md-6 mb-5">
+        <h4>Visit Our Office</h4>
+        <p>Rizz Arena HQ, TechZone Building<br>Quezon City, Metro Manila, Philippines</p>
+
+        <h4>Customer Support</h4>
+        <p>📞 Hotline: (02) 8888-9999<br>✉️ Email: support@rizzarena.ph</p>
+
+        <h4>Follow Us</h4>
+        <ul class="list-unstyled">
+          <li>📘 Facebook: Rizz Arena PH</li>
+          <li>📸 Instagram: @rizzarena</li>
+          <li>🐦 Twitter: @RizzArenaPH</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3 text-center">
+    &copy; 2025 Rizz Arena
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

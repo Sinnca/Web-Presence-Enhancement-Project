@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Rizz Arena</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel='stylesheet'>
+    <!-- Animate.css for animations -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'/>
+    <!-- Custom CSS -->
+    <link rel='stylesheet' href='style.css'>
+    <style>
+        .product-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        .review-section {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .review-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .review-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .star-rating {
+            color: #ffc107;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body style="background-color: #ffffff;">
+    <!-- Header -->
+    <header class='bg-dark text-white py-3'>
+        <div class='container text-center'>
+            <h1 id='productName'></h1>
+        </div>
+    </header>
+
+    <!-- Product Details Section -->
+    <div class='container mt-5'>
+        <div class='row align-items-center'>
+            <!-- Product Image -->
+            <div class='col-md-6 text-center'>
+                <img src='' alt='Product Image' id='productImage' class='product-image rounded shadow-lg animate__animated animate__fadeInLeft'>
+            </div>
+
+            <!-- Product Specifications -->
+            <div class='col-md-6'>
+                <h2>Specifications:</h2>
+                <ul id='productSpecs'></ul>
+
+                <!-- Buy Button -->
+                <button type='button' class='btn btn-success btn-lg animate__animated animate__pulse animate__infinite'>Buy Now</button>
+
+                <!-- Back to Homepage Button -->
+                <a href='index.html' class='btn btn-secondary mt-3'>Back to Homepage</a>
+            </div>
+        </div>
+        
+        <!-- Reviews Section -->
+        <div class="review-section">
+            <h3 class="mb-4">Expert Reviews</h3>
+            
+            <div class="review-item">
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h5>John Davidson | TechPulse Editor</h5>
+                <p class="text-muted small">Published: March 27, 2025</p>
+                <p>After extensive benchmarking, this device delivers impressive performance-to-price ratio with Antutu scores consistently above 380,000. The 5,000mAh cell provides exceptional endurance, yielding 7.5 hours of screen-on time during my testing period. The camera system, while utilizing a modest sensor, produces commendable dynamic range in well-lit environments with accurate color reproduction. Night mode performance trails flagship offerings but outperforms competitors in this price segment. The 120Hz refresh rate display offers fluid animations with minimal touch latency (measured at ~68ms), though peak brightness (~450 nits) struggles in direct sunlight. For the enthusiast on a budget, this represents a compelling package that doesn't compromise on core functionality.</p>
+            </div>
+            
+            <div class="review-item">
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h5>Sarah Mitchell | MobileTechReview</h5>
+                <p class="text-muted small">Published: February 12, 2025</p>
+                <p>This handset represents exceptional value in the mid-range segment. The display delivers impressive color accuracy with 100% sRGB coverage and Delta E &lt;2.0 during my colorimeter testing. Performance is snappy with minimal thermal throttling even during sustained Genshin Impact sessions (maintaining 58fps average with medium settings). Battery efficiency is noteworthy - a full charge consistently lasted 36+ hours with moderate usage patterns. The UFS 3.1 storage provides rapid app loading and the 8GB LPDDR4X RAM manages multitasking admirably. Camera output shows significant improvements over the previous generation, particularly in computational photography algorithms that enhance detail retention in challenging lighting. The only notable compromise is the mono speaker setup which lacks the depth and clarity found in more premium alternatives.</p>
+            </div>
+            
+            <div class="review-item">
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h5>Michael Rodriguez | SmartphoneAnalyst</h5>
+                <p class="text-muted small">Published: March 18, 2025</p>
+                <p>A capable entry in the budget-conscious segment with several compromises worth noting. While the SoC delivers adequate performance for day-to-day tasks (GeekBench 6: 750 single-core, 1950 multi-core), it struggles with computational intensity and demonstrates occasional frame drops in UI animations. Storage speeds are middling at best, with sequential read/write speeds of 850MB/s and 420MB/s respectively. The camera system utilizes dated sensor technology with limited dynamic range and noticeable noise in anything below optimal lighting. The primary 50MP sensor performs pixel-binning to 12.5MP but lacks optical stabilization, resulting in motion blur under challenging conditions. Battery optimization shows room for improvement - standby drain averaged 2.8% overnight. I recommend purchasing a high-capacity microSD card immediately, as the base storage becomes restrictive after installing essential applications and OS overhead.</p>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer class='bg-dark text-white py-3 mt-5'>
+        <div class='container text-center'>
+             &copy; 2025 Rizz Specs
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+    <!-- Font Awesome for star ratings -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <!-- JavaScript to dynamically populate product details -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+
+        const products = {
+            "tecno": {
+                name: "Tecno Spark 30 Pro",
+                image: "https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-30-pro-2.jpg",
+                specs: [
+                    "Display: 6.6-inch HD+ (720x1612 pixels)",
+                    "Processor: Octa-core (2x Cortex-A75 & 6x Cortex-A55)",
+                    "RAM: 4GB",
+                    "Storage: 64GB (Expandable via microSD)",
+                    "Rear Camera: Dual (13MP Main + 2MP Depth)",
+                    "Front Camera: 8MP",
+                    "Battery: 5,000mAh (Non-removable)",
+                    "Operating System: Android 12"
+                ]
+            },
+            "infinix": {
+                name: "Infinix Hot 50 Pro+",
+                image: "https://fdn2.gsmarena.com/vv/pics/infinix/infinix-hot-50-pro-plus-4g-1.jpg",
+                specs: [
+                    "Display: 6.78-inch FHD+ AMOLED (1080x2460 pixels), 120Hz Refresh Rate",
+                    "Processor: MediaTek Helio G100",
+                    "RAM: 8GB",
+                    "Storage: 256GB (Expandable via microSD)",
+                    "Rear Camera: Triple (50MP Main + 2MP Macro + 2MP Depth)",
+                    "Front Camera: 16MP",
+                    "Battery: 5,000mAh (Non-removable) with 33W Fast Charging",
+                    "Operating System: Android 12"
+                ]
+            },
+            "xiaomi": {
+                name: "Xiaomi Redmi Note 14",
+                image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-4g-gl.jpg",
+                specs: [
+                    "Display: 6.5-inch FHD+ (1080x2400 pixels), 90Hz Refresh Rate",
+                    "Processor: Qualcomm Snapdragon 680",
+                    "RAM: 4GB",
+                    "Storage: 64GB (Expandable via microSD)",
+                    "Rear Camera: Quad (48MP Main + 8MP Ultra-wide + 2MP Macro + 2MP Depth)",
+                    "Front Camera: 13MP",
+                    "Battery: 6,000mAh (Non-removable) with 18W Fast Charging",
+                    "Operating System: Android 12"
+                ]
+            },
+            "galaxy-s24-fe": {
+                name: "Samsung Galaxy S24 FE",
+                image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-fe-r1.jpg",
+                specs: [
+                    "Display: 6.4-inch Dynamic AMOLED (1080x2340 pixels)",
+                    "Processor: Qualcomm Snapdragon 8 Gen 2",
+                    "RAM: 6GB/8GB",
+                    "Storage: 128GB/256GB (Expandable via microSD)",
+                    "Rear Camera: Triple (50MP Main + 12MP Ultra-wide + 10MP Telephoto)",
+                    "Front Camera: 12MP",
+                    "Battery: 4,500mAh (Non-removable) with 25W Fast Charging",
+                    "Operating System: Android 13"
+                ]
+            },
+            "pixel-8a": {
+                name: "Google Pixel 8a",
+                image: "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8a.jpg",
+                specs: [
+                    "Display: 6.0-inch OLED (1080x2244 pixels)",
+                    "Processor: Google Tensor G2",
+                    "RAM: 6GB",
+                    "Storage: 128GB (Non-expandable)",
+                    "Rear Camera: Dual (12.2MP Main + 8MP Ultra-wide)",
+                    "Front Camera: 10.8MP",
+                    "Battery: 4,410mAh (Non-removable) with 18W Fast Charging",
+                    "Operating System: Android 13"
+                ]
+            },
+            "galaxy-a35": {
+                name: "Samsung Galaxy A35 5G",
+                image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a35.jpg",
+                specs: [
+                    "Display: 6.4-inch Super AMOLED (1080x2340 pixels)",
+                    "Processor: Qualcomm Snapdragon 695",
+                    "RAM: 4GB/6GB",
+                    "Storage: 64GB/128GB (Expandable via microSD)",
+                    "Rear Camera: Quad (50MP Main + 8MP Ultra-wide + 2MP Macro + 2MP Depth)",
+                    "Front Camera: 13MP",
+                    "Battery: 5,000mAh (Non-removable) with 25W Fast Charging",
+                    "Operating System: Android 13"
+                ]
+            },
+            "iphone-16e": {
+                name: "Apple iPhone 16e",
+                image: "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16e.jpg",
+                specs: [
+                    "Display: 6.1-inch LCD (1080x2536 pixels)",
+                    "Processor: Apple A17 Bionic",
+                    "RAM: 6GB",
+                    "Storage: 64GB/128GB/256GB (Non-expandable)",
+                    "Rear Camera: Dual (48MP Main + 12MP Ultra-wide)",
+                    "Front Camera: 12MP",
+                    "Battery: Up to 12 hours internet use (Non-removable)",
+                    "Operating System: iOS 17"
+                ]
+            }
+        };
+
+        document.getElementById('productName').innerText = products[product].name;
+        document.getElementById('productImage').src = products[product].image;
+
+        const specsList = document.getElementById('productSpecs');
+        products[product].specs.forEach(spec => {
+            const li = document.createElement('li');
+            li.innerText = spec;
+            specsList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
